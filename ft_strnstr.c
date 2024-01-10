@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	len_hay;
 	size_t	len_nee;
 
+	if (big == NULL || little == NULL)
+		return (NULL);
 	i = 0;
 	len_hay = ft_strlen(big);
 	len_nee = ft_strlen(little);

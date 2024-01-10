@@ -18,6 +18,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*s1_buff;
 	unsigned char	*s2_buff;
 
+	if (s1 == NULL || s2 == NULL)
+		return (0);
 	i = 0;
 	s1_buff = (void *)s1;
 	s2_buff = (void *)s2;

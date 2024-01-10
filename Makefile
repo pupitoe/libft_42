@@ -15,6 +15,7 @@ SOURCES = ft_atoi.c \
 		  ft_strdup.c\
 		  ft_strlen.c \
 		  ft_strncmp.c \
+		  ft_strcmp_s2.c \
 		  ft_strrchr.c \
 		  ft_strnstr.c \
 		  ft_calloc.c \
@@ -31,8 +32,19 @@ SOURCES = ft_atoi.c \
 		  ft_strlcpy.c \
 		  ft_strmapi.c \
 		  ft_striteri.c \
-		  ft_toupper.c
-
+		  ft_toupper.c \
+		  ft_abs.c \
+		  ft_strrev.c \
+		  ft_int_convert_base.c \
+		  ft_uint_convert_base.c \
+		  ft_bt8_convert_base.c \
+		  get_next_line.c \
+		  get_next_line_utils.c \
+		  ft_printf/sources/ft_printf.c \
+		  ft_printf/sources/ft_printf_utils.c \
+		  ft_printf/sources/ft_printf_utils2.c \
+		  ft_dump_tab.c \
+		  ft_free_tabs.c
 
 BONUS_SRC  = ft_lstnew \
 			 ft_lstadd_front \
@@ -57,10 +69,7 @@ CC = gcc
 
 all: $(NAME)
 
-$(NAME): $(OBJS) libft.h
-	ar rcs $(NAME) $(OBJS)
-
-bonus: $(OBJS_BONUS) $(OBJS) libft.h
+$(NAME): $(OBJS) $(OBJS_BONUS) libft.h
 	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 clean:
